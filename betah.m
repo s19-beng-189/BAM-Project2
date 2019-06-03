@@ -1,5 +1,5 @@
 function b=betah(v)
 %filename: betah.m
-global t
+global temp
 theta = (v+40)/10;
-b=1.0/(1+exp(-theta));
+b=((0.017*exp(0.11*temp))*1.0)/(1+exp(-theta));
