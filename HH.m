@@ -31,4 +31,11 @@ for klok=1:klokmax
   t_plot(klok)=t;
 end
 subplot(2,1,1),plot(t_plot,v_plot)
+xlabel('Time (ms)')
+ylabel('Voltage (mV)')
+title('Action Potential')
 subplot(2,1,2),plot(t_plot,mhn_plot)
+title('Probability Gate is Open')
+legend('Na_m gate', 'Na_h gate', 'K gate')
+xlabel('Time (ms)')
+ylabel('1=open, 0=closed')
