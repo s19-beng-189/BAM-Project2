@@ -4,16 +4,16 @@ clear all
 clf
 global check;
 global t1p t2p ip; %parameters for the function izero(t)
-global t;
+global temp
+temp = 40;
 in_HH
 in_mhnv
-t = 37;
 for klok=1:klokmax
   t=klok*dt;                      %note time
   m=snew(m,alpham(v),betam(v),dt); %update m
   h=snew(h,alphah(v),betah(v),dt); %update h
   n=snew(n,alphan(v),betan(v),dt); %update n
-  gNa=(3*t*gNabar/37)*(m^3)*h;    %sodium conductance
+  gNa=gNabar*(m^3)*h;    %sodium conductance
   gK =gKbar*(n^4);    %potassium conductance
   g=gNa+gK+gLbar;         %total conductance
   gE=gNa*ENa+gK*EK+gLbar*EL;         %gE=g*E
