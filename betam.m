@@ -2,4 +2,4 @@ function b=betam(v)
 %filename: betam.m
 global temp
 theta = (v+70)/18;
-b=(0.017*exp(0.11*temp))*4.0*exp(-theta);
+b=(3^((temp-37)/10))*4.0*exp(-theta);
